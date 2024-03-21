@@ -557,7 +557,7 @@ body.exito-php {
     "img9 img9 img9 img11 img11 img11"
     "img10 img10 img10 img12 img12 img12"
     "img10 img10 img10 img12 img12 img12";
-    gap: 13px;
+    gap: 18px;
     z-index: 5;
 }
 .img{
@@ -566,9 +566,11 @@ body.exito-php {
     object-fit: cover;
     object-position: center center;
     border-radius: 7px;
+    transition: transform 0.5s ease; /* Transición suave */
 }
 
 .img:hover{
+    transform: scale(1.1); /* Escala al 110% en hover */
     filter: grayscale(40%);
     cursor: pointer;
     object-fit: cover;
@@ -618,17 +620,74 @@ body.exito-php {
 
 
 
-@media (max-width:781px){
-    .container-galeria{
-        padding: 30px;
-        grid-template-columns: repeat(1,1fr);
-    }
-    .box:nth-child(1){
-        grid-column-start: span 1;
-    }
-    .box:nth-child(4){
-        grid-column-start: span 1;
+@media (max-width:1501px){
+    .container-grid{
+        display: grid;
+        height: 280vh;
+        margin: 50px 100px;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(12,1fr);
+        grid-template-areas: 
+        "img2 img2 img3 img3 img3 img3"
+        "img2 img2 img3 img3 img3 img3"
+        "img4 img4 img3 img3 img3 img3"
+        "img4 img4 img8 img8 img1 img1"
+        "img7 img7 img8 img8 img1 img1"
+        "img7 img7 img8 img8 img1 img1"
+        "img7 img7 img5 img5 img6 img6"
+        "img7 img7 img5 img5 img6 img6"
+        "img9 img9 img9 img11 img11 img11"
+        "img9 img9 img9 img11 img11 img11"
+        "img10 img10 img10 img12 img12 img12"
+        "img10 img10 img10 img12 img12 img12";
+        gap: 18px;
+        z-index: 5;
     }
 }
+@media (max-width:901px){
+    .container-grid{
+        display: grid;
+        height: 680rem;
+        margin: 50px 10px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(12,1fr);
+        grid-template-areas: 
+        "img2 img2 img2 img2"
+        "img3 img3 img3 img3"
+        "img4 img4 img4 img4"
+        "img5 img5 img5 img5"
+        "img6 img6 img6 img6"
+        "img1 img1 img1 img1"
+        "img7 img7 img7 img7"
+        "img8 img8 img8 img8"
+        "img9 img9 img9 img9"
+        "img10 img10 img10 img10"
+        "img11 img11 img11 img11"
+        "img12 img12 img12 img12";
+        gap: 18px;
+        z-index: 5;
+    }
+}
+@media (max-width:701px){
+    .container-grid{
+        height: 550rem;
+    }
+}
+@media (max-width:601px){
+    .container-grid{
+        height: 450rem;
+    }
+}
+@media (max-width:501px){
+    .container-grid{
+        height: 380rem;
+    }
+}
+@media (max-width:401px){
+    .container-grid{
+        height: 300rem;
+    }
+}
+
 
 /*Fin de la galeria*/
