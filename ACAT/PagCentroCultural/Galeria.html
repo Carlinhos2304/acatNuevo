@@ -67,7 +67,7 @@
 
     <!-- Galeria flexbox -->
     <section class="container-grid">
-      <img src="ImgGaleria/3.- Canto Lirico/cantoLirico1.jpg" alt="Soy la primera imagen" class="img img-1">
+      <img src="ImgGaleria/3.- Canto Lirico/cantoLirico1.jpg" alt="Soy la primera imagen" class="img img-1 ">
       <img src="ImgGaleria/7.-Carpetas de Coros/IMG-20230627-WA0041.jpeg" alt="" class="img img-2">
       <img src="ImgGaleria/7.-Carpetas de Coros/coro1.JPG" alt="" class="img img-3">
       <img src="ImgGaleria/7.-Carpetas de Coros/IMG_0948.JPG" alt="" class="img img-4">
@@ -107,7 +107,13 @@
     </footer>
 
   <body>
-    
+    <script>
+      function mostrarImagenCompleta(elemento){
+        if (elemento.webkitRequestFullscreen){
+          elemento.webkitRequestFullscreen();
+        }
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
