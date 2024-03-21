@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap');
+header{
+    background-color: #0833a2;
+}
+
+.carrusel{
+    
+
+}
+.nosotros, .servicios
+{
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+    line-height: 2em;
+}
+
+.carousel-caption{
+    font-size: 2em;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc7bf26);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #2c3e50, #bdc7bf26);
+
+    position: absolute; 
+    right: 15%;
+    top: 125px; 
+   
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    bottom: auto;
+}
+.carousel-caption h5{
+    font-size: 3em;
+    
+}
+
+
+/* CSS FOOTER*/
+.footer {
+    background-color: #0833a2;
+    color: #fff;
+    padding: 20px 20px; /* Ajusta el padding según lo que necesites */
+    display: flex;
+    align-items: center;
+    height: 100px; /* Ajusta la altura según lo que necesites */
+    height: 200px;
+    margin-top: 100px;
+}
+
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    width: 200%;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    width: 110px; /* Ajusta el tamaño de tu logo según sea necesario */
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    margin-right: 20px;
+    text-align: center;
+    margin-left: -11px;
+}
+.footer-copyright {
+    font-size: 0.8em;
+}
+/* FIN CSS FOOTER*/
+
+
+/* CSS TARJETAS DE INFORMACION*/
+
+.info-imagen h2 {
+    /* Estilos regulares del título de las tarjetas */
+    color: #0833a2;
+    font-size: 2.5rem;
+    font-weight: 650;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Agrega una sombra al texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Añade una transición suave */
+    transition: color 0.3s ease;
+}
+
+.info-imagen h2:hover {
+    /* Cambia el color del texto en el hover */
+    color: #3f6b94; /* Color amarillo para el hover */
+}
+
+/* CSS TARJETAS DE INFORMACION */
+.info-section-nuevo {
+    padding: 50px 0;
+    background-color: #f8f8f8; /* Cambia el color de fondo  */
+    margin-top: 200px;
+}
+
+.info-imagen img {
+    
+    border-radius: 10px;
+    margin-left: 300px;
+    transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 767px) {
+    .info-imagen img {
+        margin-left: 100px;
+        margin-top: 30px;
+        width: 60%;
+    }
+}
+
+.info-imagen p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 410;
+}
+
+
+/*Galeria de imagenes*/
+.container-galeria{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3,1);
+    grid-template-rows: 450px;
+    grid-gap: 20px;
+    padding: 100px 0;
+}
+.container-galeria .box figure{
+    width: 100%;
+    height: 100%;
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease; /* Transición suave */
+}
+
+.box:nth-child(1){
+    grid-column-start: span 2;
+}
+.box:nth-child(4){
+    grid-column-start: span 2;
+}
+
+.box:hover img {
+  transform: scale(1.1); /* Escala al 110% en hover */
+}
+
+
+@media (max-width:781px){
+    .container-galeria{
+        padding: 30px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .box:nth-child(1){
+        grid-column-start: span 1;
+    }
+    .box:nth-child(4){
+        grid-column-start: span 1;
+    }
+}
+
+/* TITULO NEGRO SPIRITUALS */
+.titulo {
+    text-align: center;
+    font-size: 36px;
+    color: #0833a2; /* Color del texto */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 24px;
+    color: #555; /* Color del texto */
+}
+
+/* FIN TITULO NEGRO SPIRITUALS */
+
+.texto-destacado {
+    color: #0833a2;
+    font-size: 25px;
+  }
+
+/* Formulario de descarga negro spirituals */
+
+.formulario-descarga {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.etiqueta-formulario {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+
+.campo-formulario {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.boton-descarga {
+    background-color: #007bff;
+    color: #fff;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    display: inline-block; /* Cambiado a en línea para que no sea un bloque completo */
+}
+
+.formulario-descarga h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Formulario de descarga negro spirituals */
+
+
+/* LOGIN PHP */
+
+.wrapper {
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.logo-admin {
+    width: 80px;
+    margin: auto;
+    padding-top: 15%;
+}
+
+.logo-admin img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #5f5f5f,
+        0px 0px 0px 5px #ecf0f3,
+        8px 8px 15px #a7aaa7,
+        -8px -8px 15px #fff;
+}
+
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+wrapper .form-field .fas {
+    color: #555;
+}
+
+.wrapper .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #03A9F4;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+    background-color: #039BE5;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #03A9F4;
+}
+
+.wrapper a:hover {
+    color: #039BE5;
+}
+
+.mensaje-errorAdmin {
+    color: red;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* fin LOGIN PHP */
+
+
+/* DISEÑO PANEL ADMIN*/
+
+
+.body-panelAdmin {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #495057;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Cambia a una disposición de columna en lugar de fila */
+}
+
+/* Contenedor principal */
+
+.container-panel {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* Estilos para el contenido principal */
+
+.main-content {
+    flex: 1;
+    overflow-y: auto; /* Hace que el contenido sea desplazable si es necesario */
+    padding: 20px;
+}
+
+/* Estilos adicionales para las secciones */
+
+.seccion-panel {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Lista de solicitudes */
+.lista-solicitudes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.solicitud-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boton-procesar {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-procesar:hover {
+    background-color: #00796b; /* Cambia el color al pasar el mouse */
+}
+
+/* Lista de partituras */
+.lista-partitura {
+    list-style-type: none;
+    padding: 0;
+}
+
+.partitura-item {
+    margin-bottom: 10px;
+}
+
+.checkbox-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.enviar-partitura-btn {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enviar-partitura-btn:hover {
+    background-color: #00796b; /* Cambia el color al pasar el mouse */
+}
+
+/* Lista de notificaciones */
+.notificaciones-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notificaciones-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+/* Botón de cerrar sesión */
+.cerrar-sesion-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cerrar-sesion-btn:hover {
+    background-color: #1a1a1a; /* Cambia el color al pasar el mouse */
+}
+
+/* Otros estilos que tenías */
+.body-panelAdmin h2 {
+    color: #009688;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* FIN DISEÑO PANEL ADMIN*/
+
+
+
+
+/* EXITO PHP*/
+
+body.exito-php {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.msg-exito {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.msg-exito h1 {
+    color: #007BFF;
+}
+
+.msg-exito p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Estilos del botón de regreso */
+.boton-regresar-exito {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.boton-regresar-exito:hover {
+    background-color: #0056b3;
+}
+
+/*  FIN EXITO PHP*/
+  
