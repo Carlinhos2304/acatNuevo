@@ -36,6 +36,31 @@ header{
     
 }
 
+.titulo-index{
+    font-family: "Lora", serif;
+}
+
+.titulo-quienesSomos{
+    font-family: "Lora", serif;
+}
+
+.titulo-galeria {
+    font-family: "Lora", serif;
+}
+
+/* CSS titulo secciones letras*/
+
+.nav-item .nav-link{
+    font-family: "Lora", serif;
+    color: #fff;
+    
+}
+
+
+
+/* FIN CSS titulo secciones letras*/
+
+
 
 /* CSS FOOTER*/
 .footer {
@@ -183,6 +208,7 @@ header{
     font-size: 36px;
     color: #0833a2; /* Color del texto */
     margin-bottom: 20px; /* Espacio inferior */
+    font-family: "Lora", serif;
 }
 
 .subtitulo {

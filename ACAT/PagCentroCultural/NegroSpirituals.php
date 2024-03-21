@@ -9,6 +9,8 @@ session_start(); // Inicia la sesión
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
   <header>
     <div class="container">
@@ -36,7 +38,7 @@ session_start(); // Inicia la sesión
                       </li>
 
                       <li class="nav-item">
-                          <a class="nav-link" href="NegroSpirituals.php">Negro Spirituals</a>
+                          <a class="nav-link" href="NegroSpirituals.php" style="color: gold; text-shadow: 0 0 10px gold;" >Negro Spirituals</a>
                       </li>
 
                       <li class="nav-item">
@@ -54,7 +56,7 @@ session_start(); // Inicia la sesión
 
     <br>
     <div class="titulo">¿Quiénes Somos Negro Spirituals?</div>
-    <div class="subtitulo">Directores de Coros con vasta experiencia en distintos tipos de Coros, desde Coros de niños hasta Coros de adultos mayores.</div>
+    <div class="subtitulo" style="font-family: Montserrat, sans-serif;">Directores de Coros con vasta experiencia en distintos tipos de Coros, desde Coros de niños hasta Coros de adultos mayores.</div>
     <br>
 
 
@@ -87,7 +89,7 @@ session_start(); // Inicia la sesión
 
         <div class="col-md-4">
           <div class="card">
-            <img src="ImgNegroS/persona3.jpg" class="card-img-top" alt="Imagen 3" height="500">
+            <img src="ImgNegroS/hans.jpg" class="card-img-top" alt="Imagen 3" height="500">
             <div class="card-body">
               <h5 class="card-title">Hans Barra Astudillo.</h5>
               <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal3" data-persona="3">
@@ -167,12 +169,33 @@ session_start(); // Inicia la sesión
     </div>
 
     <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
-      <!-- Contenido del modal para la Persona 3 -->
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Hans Barra Astudillo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4 style="border-bottom: 1px solid #3498db;">Director de Coros:</h4>
+            <ul>
+              <li>Director Ayudante del Coro Hildegard von Bingen de la Agrupación Cultural Artística de Talcahuano Chile.</li>
+              <!-- Resto de la lista -->
+            </ul>
+            <h4 style="border-bottom: 1px solid #3498db;">Estudios:</h4>
+            <p>Estudios de  Piano.</p>
+            <p>Teoría de la Música, Dir. Coral</p>
+          
+            <!-- Resto de la información -->
+            <h4 style="border-bottom: 1px solid #3498db;">Integrante:</h4>
+            <p>Socio de la Agrupación Cultural Artística de Talcahuano desde el 2017Se integra a la organización del Encuentro Coral Negro Spirituals 2021 Pasa a formar parte de de la Mesa de trabajo de dicho Festival a la fecha.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <br>
     <br>
-
+    <br>
     <!-- Acordeon -->
     <div class="container">
       <div class="row justify-content-center">
@@ -182,11 +205,11 @@ session_start(); // Inicia la sesión
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  <span class="texto-destacado">Difundir el género Negro Musical:</span>
+                  <span class="texto-destacado" style="font-family: lora, serif;">Difundir el género Negro Musical:</span>
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+                <div class="accordion-body" style="font-family: Montserrat, sans-serif;">
                   Difundimos el género en nuestros coros y aquellos que deseen adentrarse a este maravilloso mundo musical.
                 </div>
               </div>
@@ -195,11 +218,11 @@ session_start(); // Inicia la sesión
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <span class="texto-destacado">Utilizar como herramienta permanente el Encuentro Coral Virtual:</span>
+                  <span class="texto-destacado" style="font-family: lora, serif;">Utilizar como herramienta permanente el Encuentro Coral Virtual:</span>
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+                <div class="accordion-body" style="font-family: Montserrat, sans-serif;">
                   Mantenemos contacto con coros de diferentes lugares, presentando material conocido y nuevo a través de encuentros virtuales.
                 </div>
               </div>
@@ -208,11 +231,11 @@ session_start(); // Inicia la sesión
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <span class="texto-destacado">Proponer:</span>
+                  <span class="texto-destacado" style="font-family: lora, serif;">Proponer:</span>
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
+                <div class="accordion-body" style="font-family: Montserrat, sans-serif;">
                   Compartir repertorio común a los coros para difundir este género fortalecer lazos de amistad, vínculos musicales.
                 </div>
               </div>
@@ -221,14 +244,14 @@ session_start(); // Inicia la sesión
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <span class="texto-destacado">Para lograr los objetivos propuestos contamos con:</span>
+                  <span class="texto-destacado" style="font-family: lora, serif;">Para lograr los objetivos propuestos contamos con:</span>
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  I. La Agrupación Cultural Artística de Talcahuano-Chile.
-                  II. Nuestros propios Coros.
-                  III. Alumnos tesistas en Computación, Diseño Gráfico y Seguridad Cibernética, pertenecientes a una Institución de Educación Superior. Construyendo nuestra página con toda la información necesaria, incluyendo partituras de este género.
+                <div class="accordion-body" style="font-family: Montserrat, sans-serif;">
+                <li>I. La Agrupación Cultural Artística de Talcahuano-Chile.</li>
+                <li>II. Nuestros propios Coros.</li>
+                <li>III. Alumnos tesistas en Computación, Diseño Gráfico y Seguridad Cibernética, pertenecientes a una Institución de Educación Superior. Construyendo nuestra página con toda la información necesaria, incluyendo partituras de este género.</li> 
                 </div>
               </div>
             </div>
