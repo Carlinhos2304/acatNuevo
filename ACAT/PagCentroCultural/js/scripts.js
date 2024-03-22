@@ -29,6 +29,24 @@ document.querySelectorAll('.btn-primary').forEach(button => {
     });
 });
 
+//Muesta la imagen completa en la galeria
+function mostrarImagen(UrlImagen) {
+    let imagenAmpliada = document.querySelector('.imagen-ampliada');
+    let imagenAmpliadaContent = document.querySelector('.imagen-ampliada-content');
+    let imagenThumbnail = document.querySelector('.img');
+    let body = document.querySelector("body");
 
+    imagenAmpliada.style.display = 'block';
+    imagenAmpliadaContent.src = UrlImagen;
+    body.style.overflow="hidden";
+}
+
+function cerrarImagenAmpliada() {
+    let body = document.querySelector("body");
+
+    let imagenAmpliada = document.querySelector('.imagen-ampliada');
+    imagenAmpliada.style.display = 'none';
+    body.style.overflow="auto";
+}
 
 

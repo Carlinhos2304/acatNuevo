@@ -67,20 +67,24 @@
 
     <!-- Galeria flexbox -->
     <section class="container-grid">
-      <img src="ImgGaleria/3.- Canto Lirico/cantoLirico1.jpg" alt="Soy la primera imagen" class="img img-1 ">
-      <img src="ImgGaleria/7.-Carpetas de Coros/IMG-20230627-WA0041.jpeg" alt="" class="img img-2">
-      <img src="ImgGaleria/7.-Carpetas de Coros/coro1.JPG" alt="" class="img img-3">
-      <img src="ImgGaleria/7.-Carpetas de Coros/IMG_0948.JPG" alt="" class="img img-4">
-      <img src="ImgGaleria/7.-Carpetas de Coros/IMG-20230725-WA0024.jpg" alt="" class="img img-5">
-      <img src="ImgGaleria/reconocimiento1.JPG" alt="" class="img img-6">
-      <img src="ImgGaleria/reconocimiento2.JPG" alt="" class="img img-7">
-      <img src="ImgGaleria/reconocimiento3.JPG" alt="" class="img img-8">
-      <img src="ImgGaleria/7.-Carpetas de Coros/20230126_184932.jpg" alt="" class="img img-9">
-      <img src="ImgGaleria/3.- Canto Lirico/grupo-3.jpg" alt="" class="img img-10">
-      <img src="ImgGaleria/5.- Coros de niños/12371076_10208501142072293_7565562729969118_o.jpg" alt="" class="img img-11">
-      <img src="ImgGaleria/5.- Coros de niños/coroninos1.jpg" alt="" class="img img-12">
+      <img src="ImgGaleria/3.- Canto Lirico/cantoLirico1.jpg" alt="Soy la primera imagen" class="img img-1 " onclick="mostrarImagen('ImgGaleria/3.- Canto Lirico/cantoLirico1.jpg')">
+      <img src="ImgGaleria/7.-Carpetas de Coros/IMG-20230627-WA0041.jpeg" alt="" class="img img-2" onclick="mostrarImagen('ImgGaleria/7.-Carpetas de Coros/IMG-20230627-WA0041.jpeg')">
+      <img src="ImgGaleria/7.-Carpetas de Coros/coro1.JPG" alt="" class="img img-3" onclick="mostrarImagen('ImgGaleria/7.-Carpetas de Coros/coro1.JPG')">
+      <img src="ImgGaleria/7.-Carpetas de Coros/IMG_0948.JPG" alt="" class="img img-4" onclick="mostrarImagen('ImgGaleria/7.-Carpetas de Coros/IMG_0948.JPG')">
+      <img src="ImgGaleria/7.-Carpetas de Coros/IMG-20230725-WA0024.jpg" alt="" class="img img-5" onclick="mostrarImagen('ImgGaleria/7.-Carpetas de Coros/IMG-20230725-WA0024.jpg')">
+      <img src="ImgGaleria/reconocimiento1.JPG" alt="" class="img img-6" onclick="mostrarImagen('ImgGaleria/reconocimiento1.JPG')">
+      <img src="ImgGaleria/reconocimiento2.JPG" alt="" class="img img-7" onclick="mostrarImagen('ImgGaleria/reconocimiento2.JPG')">
+      <img src="ImgGaleria/reconocimiento3.JPG" alt="" class="img img-8" onclick="mostrarImagen('ImgGaleria/reconocimiento3.JPG')">
+      <img src="ImgGaleria/7.-Carpetas de Coros/20230126_184932.jpg" alt="" class="img img-9" onclick="mostrarImagen('ImgGaleria/7.-Carpetas de Coros/20230126_184932.jpg')">
+      <img src="ImgGaleria/3.- Canto Lirico/grupo-3.jpg" alt="" class="img img-10" onclick="mostrarImagen('ImgGaleria/3.- Canto Lirico/grupo-3.jpg')">
+      <img src="ImgGaleria/5.- Coros de niños/12371076_10208501142072293_7565562729969118_o.jpg" alt="" class="img img-11" onclick="mostrarImagen('ImgGaleria/5.- Coros de niños/12371076_10208501142072293_7565562729969118_o.jpg')">
+      <img src="ImgGaleria/5.- Coros de niños/coroninos1.jpg" alt="" class="img img-12" onclick="mostrarImagen('ImgGaleria/5.- Coros de niños/coroninos1.jpg')">
+      <div class="imagen-ampliada" onclick="cerrarImagenAmpliada()">
+        <span class="cerrar">&times;</span>
+        <img src="" alt="Imagen Ampliada" class="imagen-ampliada-content">
+      </div>
     </section>
-
+    
     <footer class="footer">
       <div class="container">
         <div class="row d-flex justify-content-between">
@@ -107,13 +111,7 @@
     </footer>
 
   <body>
-    <script>
-      function mostrarImagenCompleta(elemento){
-        if (elemento.webkitRequestFullscreen){
-          elemento.webkitRequestFullscreen();
-        }
-      }
-    </script>
+    <script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
