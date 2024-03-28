@@ -540,8 +540,6 @@ body.exito-php {
 }
 
 .img:hover{
-    transform: scale(1.1); /* Escala al 110% en hover */
-    object-fit: cover;
     box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.8);/*sobra*/
     cursor: pointer;
 }
