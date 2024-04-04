@@ -89,7 +89,7 @@ session_start(); // Inicia la sesión
 
         <div class="col-md-4">
           <div class="card">
-            <img src="ImgNegroS/hans.jpg" class="card-img-top" alt="Imagen 3" height="500">
+            <img src="ImgNegroS/hans2.JPG" class="card-img-top" alt="Imagen 3" height="500">
             <div class="card-body">
               <h5 class="card-title">Hans Barra Astudillo.</h5>
               <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal3" data-persona="3">
