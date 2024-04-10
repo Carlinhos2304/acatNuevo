@@ -405,14 +405,6 @@ session_start(); // Inicia la sesión
 
 
 
-    
-    
-  
-
-
-
-
-
     <footer class="footer">
       <div class="container">
         <div class="row d-flex justify-content-between">
@@ -424,7 +416,7 @@ session_start(); // Inicia la sesión
           <div class="col-md-4 mb-3">
             <div class="footer-links text-center">
               <a href="Home.html">Inicio</a>
-              <a href="#">Contacto</a>
+              <a href="contacto.html">Contacto</a>
               <a href="#">Términos de Servicio</a>
               <a href="#">Privacidad</a>
             </div>

@@ -695,3 +695,38 @@ body.exito-php {
 }
 
 /*Fin de la galeria*/
+
+
+/* css CONTACTO*/
+#contacto .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  #contacto .social-links .btn {
+    font-size: 20px;
+  }
+  
+  #contacto .map-wrapper {
+    margin-top: 30px;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #contacto .contact-info,
+  #contacto .social-links,
+  #contacto .map-wrapper {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+
+/* FIN CSS CONTACTO*/
