@@ -281,7 +281,7 @@ session_start(); // Inicia la sesión
                     <button class="btn btn-secondary ocultar-texto" style="display: none;">Ocultar texto</button>
                 </div>
                 <div class="col-md-6 info-imagen">
-                    <img src="ImgNegroS/ngs.jpg" alt="Imagen del nuevo contenido" width="300">
+                    <img src="ImgNegroS/NegroS.jpg" alt="Imagen del nuevo contenido" width="300" style="margin-left: 20%;">
                 </div>
             </div>
         </div>
@@ -307,7 +307,7 @@ session_start(); // Inicia la sesión
                     <button class="btn btn-secondary ocultar-texto" style="display: none;">Ocultar texto</button>
                 </div>
                 <div class="col-md-6 info-imagen">
-                    <img src="ImgNegroS/Gospel.webp" alt="Imagen del nuevo contenido" width="300">
+                    <img src="ImgNegroS/gospel.jpeg" alt="Imagen del nuevo contenido" width="300" style="margin-left: 20%;">
                 </div>
             </div>
         </div>
@@ -333,8 +333,8 @@ session_start(); // Inicia la sesión
                     <button class="btn btn-secondary ocultar-texto" style="display: none;">Ocultar texto</button>
                 </div>
                 <div class="col-md-6 info-imagen">
-                    <img src="ImgNegroS/Gospel.webp" alt="Imagen del nuevo contenido" width="300">
-                    <img src="ImgNegroS/ngs.jpg" alt="Imagen del nuevo contenido" width="300">
+                    <img src="ImgNegroS/gospelvsnegros.jpg" alt="Imagen del nuevo contenido" width="300" style="margin-left: 20%;">
+                    
                 </div>
             </div>
         </div>
@@ -415,7 +415,7 @@ session_start(); // Inicia la sesión
           </div>
           <div class="col-md-4 mb-3">
             <div class="footer-links text-center">
-              <a href="Home.html">Inicio</a>
+              <a href="index.html">Inicio</a>
               <a href="contacto.html">Contacto</a>
               <a href="#">Términos de Servicio</a>
               <a href="#">Privacidad</a>
