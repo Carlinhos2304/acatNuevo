@@ -790,4 +790,13 @@ body.exito-php {
 }
 /* css FIN PROXIMAMENTE*/
 
-
+/* css AVISO*/
+.carousel-container {
+    max-width: 600px; /* Ajusta este valor según sea necesario */
+    margin: auto;
+}
+.carousel-item img {
+    max-height: 950px; /* Ajusta este valor según sea necesario */
+    object-fit: cover;
+}
+/* css FIN aviso*/

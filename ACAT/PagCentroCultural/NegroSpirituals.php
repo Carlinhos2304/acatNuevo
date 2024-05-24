@@ -340,6 +340,43 @@ session_start(); // Inicia la sesión
         </div>
     </section>
 
+    <!-- AVISO URGENTE -->
+    <div class="container mt-5">
+      <div class="carousel-container">
+        <div id="avisoCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="ImgNegroS/uno.jpg" class="d-block w-100" alt="Descripción de la foto 1">
+            </div>
+            
+            <div class="carousel-item">
+              <img src="ImgNegroS/dos.jpg" class="d-block w-100" alt="Descripción de la foto 2">
+            </div>
+            
+            <div class="carousel-item">
+              <img src="ImgNegroS/tres.jpg" class="d-block w-100" alt="Descripción de la foto 3">
+            </div>
+            
+            <div class="carousel-item">
+              <img src="ImgNegroS/cuatro.jpg" class="d-block w-100" alt="Descripción de la foto 4">
+            </div>
+          
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#avisoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#avisoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <!-- Formulario para descargar partituras -->
     <div class="container mt-5">
         <div class="row d-flex align-items-center">
