@@ -672,7 +672,7 @@ body.exito-php {
 }
 
 .imagen-ampliada {
-    display: grid;
+    display: none;
     align-content: center;
     justify-content: center;
     position: fixed;
