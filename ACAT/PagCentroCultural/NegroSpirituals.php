@@ -425,6 +425,15 @@ session_start(); // Inicia la sesión
                         <option value="My Lord What a Morning.pdf">My Lord What a Morning.pdf</option>
                         <option value="Wade In The Water Short (1).pdf">Wade In The Water Short (1).pdf</option> 
                         <!-- Agrega más opciones según sea necesario -->
+                        <option value="Amazing Grace 3.pdf">Amazing Grace 3.pdf</option>
+                        <option value="Copy of Music Down In My Soul - Hogan - Jan 13 2023 - 11-24 AM.pdf">Copy of Music Down In My Soul.pdf</option> 
+                        <option value="Drinkin' of the Wine.pdf">Drinkin' of the Wine.pdf</option> 
+                        <option value="Im on my way.pdf">Im on my way.pdf</option> 
+                        <option value="IÔÇÖve Got Peace Like a River (2).pdf">IÔÇÖve Got Peace Like a River (2).pdf</option> 
+                        <option value="Peter on the Sea.pdf">Peter on the Sea.pdf</option> 
+                        <option value="Tryin to get home V3.pdf">Tryin to get home V3.pdf</option> 
+                        <option value="Turn Me 'RoundHCEdition.pdf">Turn Me 'RoundHCEdition.pdf</option> 
+                        <option value="Yonder Come Day - Tucker - Jan 13 2023 - 12-01 PM (1).pdf">Yonder Come Day.pdf</option> 
                     </select>
                     
                     <!-- Campo oculto para el estado -->
