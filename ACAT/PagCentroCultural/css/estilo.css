@@ -79,8 +79,7 @@ text-shadow: 0px 3px 3px rgba(30, 92, 173, 0.4),0px -1px 1px rgba(0,0,0,0.3);
     padding: 20px 20px; /* Ajusta el padding según lo que necesites */
     display: flex;
     align-items: center;
-    height: 100px; /* Ajusta la altura según lo que necesites */
-    height: 200px;
+    height: 300px; /* Ajusta la altura según lo que necesites */
     margin-top: 100px;
 }
 
