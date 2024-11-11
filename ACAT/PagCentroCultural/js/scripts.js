@@ -75,4 +75,28 @@ function cerrarImagenAmpliada() {
     body.style.overflow="auto";
 }
 
+// funcion nueva para partituras
+$(document).ready(function() {
+    $('#tablaPartiturasUnica').DataTable({
+        "pageLength": 5,
+        "responsive": true, // Activar modo responsivo
+        "language": {
+            "search": "Buscar:",
+            "lengthMenu": "Mostrar _MENU_ descargas por página",
+            "info": "Mostrando _START_ a _END_ de _TOTAL_ partituras",
+            "paginate": {
+                "first": "Primero",
+                "last": "Último",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            }
+        },
+        "dom": '<"top d-flex justify-content-between"lf>rt<"bottom d-flex justify-content-between"ip><"clear">'
+    });
 
+    // Evento para actualizar el campo de partitura seleccionada en el formulario
+    $('#tablaPartiturasUnica tbody').on('click', '.seleccionar-partitura-unica', function() {
+        var tituloPartitura = $(this).data('titulo'); // Obtener el valor real desde el atributo data
+        $('#partituraUnica').val(tituloPartitura); // Pasarlo al campo oculto en el modal
+    });
+});

@@ -183,58 +183,305 @@ text-shadow: 0px 3px 3px rgba(30, 92, 173, 0.4),0px -1px 1px rgba(0,0,0,0.3);
 
 /* Formulario de descarga negro spirituals */
 
-.formulario-descarga {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+/* Ajuste de DataTables */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_length {
+    float: left;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+}
+
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 0.9em;
+    color: #333;
+    margin-left: 5px;
+}
+
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_filter label {
+    color: #333;
+    font-weight: normal;
+}
+
+/* Botones de paginación */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #0833a2 !important;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 0 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #0833a2 !important;
+    color: white !important;
+    border-radius: 4px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #0833a2;
+    color: white !important;
+}
+
+/* Estilo para encabezado de la tabla */
+#tablaPartiturasUnica {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    overflow: hidden;
+}
+
+#tablaPartiturasUnica thead {
+    background-color: #0833a2;
+    color: white;
+    font-weight: bold;
     text-align: center;
 }
 
-.etiqueta-formulario {
-    display: block;
-    margin-top: 15px;
-    font-size: 18px;
-    color: #333;
-}
-
-
-.campo-formulario {
-    width: 100%;
+#tablaPartiturasUnica th {
     padding: 15px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 8px;
     font-size: 16px;
 }
 
+#tablaPartiturasUnica td {
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+}
+
+#tablaPartiturasUnica tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+#tablaPartiturasUnica tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Estilo del botón "Acceder" */
+.seleccionar-partitura-unica {
+    background-color: #e74c3c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.seleccionar-partitura-unica:hover {
+    background-color: #c0392b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del Modal */
+#modalFormularioUnico .modal-content {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#modalFormularioUnico .modal-header {
+    border-bottom: none;
+}
+
+#modalFormularioUnico .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0833a2;
+}
+
+#modalFormularioUnico .btn-close {
+    outline: none;
+}
+
+/* Estilos para los labels del formulario */
+.etiqueta-formulario-unica {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los campos de entrada */
+.campo-formulario-unica {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.campo-formulario-unica:focus {
+    border-color: #0833a2;
+    box-shadow: 0 0 5px rgba(8, 51, 162, 0.2);
+    outline: none;
+}
+
+/* Estilo del botón de envío en el modal */
 .boton-descarga {
-    background-color: #007bff;
+    background-color: #e74c3c;
     color: #fff;
-    padding: 18px 30px;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: background-color 0.3s;
-    display: inline-block; /* Cambiado a en línea para que no sea un bloque completo */
+    width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.formulario-descarga h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #0a4677;
-    font-weight: bold;
-    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+.boton-descarga:hover {
+    background-color: #c0392b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.boton-descarga:focus {
+    outline: none;
+}
 
-/* Formulario de descarga negro spirituals */
+/*  */
+/* Estilos adicionales para DataTables */
+.table-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Alineación de los controles de DataTables */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    padding: 10px;
+}
+
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #0833a2 !important;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #0833a2;
+    color: white !important;
+    border-radius: 4px;
+}
+
+/* AJUSTES ADICIONALES RESPONSIVO PARA PARTIRUAS */
+/* General container styles for small screens */
+.table-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* DataTables Responsive adjustments */
+@media (max-width: 768px) {
+    /* Ajusta el encabezado de la tabla y los botones de paginación en pantallas pequeñas */
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .dataTables_wrapper .dataTables_filter {
+        margin-top: 10px;
+    }
+    .dataTables_wrapper .dataTables_paginate {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* Ocultar algunas columnas en pantallas pequeñas */
+    #tablaPartiturasUnica th:nth-child(2), /* Fecha */
+    #tablaPartiturasUnica td:nth-child(2),
+    #tablaPartiturasUnica th:nth-child(3), /* Categoría */
+    #tablaPartiturasUnica td:nth-child(3) {
+        display: none;
+    }
+
+    /* Ajuste de botones para ocupar ancho completo */
+    .seleccionar-partitura-unica {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Ajuste adicional para pantallas ultra pequeñas */
+@media (max-width: 480px) {
+    .table-container {
+        padding: 10px;
+    }
+
+    /* Cambiar el tamaño del texto */
+    #tablaPartiturasUnica th,
+    #tablaPartiturasUnica td {
+        font-size: 14px;
+    }
+}
+
+/* PARA LSO BOTONES DE SIGUIENTE  */
+/* Estilo de los botones de paginación */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 2px;
+    border: 1px solid #0833a2;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    color: #0833a2;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #0833a2;
+    color: #ffffff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #0833a2;
+    color: #ffffff;
+    border: 1px solid #0833a2;
+}
+
+/*FIN PARA LSO BOTONES DE SIGUIENTE  */
+/* FIN Formulario de descarga negro spirituals */
 
 
 /* LOGIN PHP */

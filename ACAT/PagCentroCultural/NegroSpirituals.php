@@ -11,6 +11,13 @@ session_start(); // Inicia la sesión
     <link rel="stylesheet" href="css/estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- jQuery y JavaScript de DataTables -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- CDN de DataTables Responsive -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
 </head>
   <header>
     <div class="container">
@@ -377,76 +384,358 @@ session_start(); // Inicia la sesión
 
 
 
-    <!-- Formulario para descargar partituras -->
-    <div class="container mt-5">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6 mx-auto text-center formulario-descarga">
-                <h2>Descargar Partituras</h2>
+  <div class="container mt-5">
+    <h2 class="text-center">Descargar Partituras</h2>
 
-                <form id="miFormulario" method="post" action="../php/descargar_partitura.php">
-
-                    <!-- Nombre Completo -->
-                    <label for="nombre" class="etiqueta-formulario">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" class="campo-formulario" required>
-    
+    <!-- Contenedor de la tabla y los controles -->
+    <div class="table-container">
+        <!-- Tabla de Partituras -->
+        <table id="tablaPartiturasUnica" class="table table-striped display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Fecha de Actualización</th>
+                    <th>Categoría</th>
+                    <th>Descargar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-titulo-real="I'm Building Me A Home_Walton.pdf">I'm Building Me A Home enauu</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="I'm Building Me A Home_Walton.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="I want to go home V2 - Score 2.pdf">I want to go home V2 - Score 2</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="I want to go home V2 - Score 2.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Mary had a baby.pdf">Mary had a baby</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Mary had a baby.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="My Lord What a Morning.pdf">My Lord What a Morning</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="My Lord What a Morning.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Wade In The Water Short (1).pdf">Wade In The Water Short (1)</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Wade In The Water Short (1).pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Amazing Grace 3.pdf">Amazing Grace 3</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Amazing Grace 3.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Copy of Music Down In My Soul - Hogan - Jan 13 2023 - 11-24 AM.pdf">Copy of Music Down In My Soul - Hogan - Jan 13 2023 - 11-24 AM</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Copy of Music Down In My Soul - Hogan - Jan 13 2023 - 11-24 AM.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Drinkin' of the Wine.pdf">Drinkin' of the Wine</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Drinkin' of the Wine.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Im on my way.pdf">Im on my way</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Im on my way.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="IÔÇÖve Got Peace Like a River (2).pdf">IÔÇÖve Got Peace Like a River (2)</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="IÔÇÖve Got Peace Like a River (2).pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Peter on the Sea.pdf">Peter on the Sea</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Peter on the Sea.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Tryin to get home V3.pdf">Tryin to get home V3</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Tryin to get home V3.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Turn Me 'RoundHCEdition.pdf">Turn Me 'RoundHCEdition</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Turn Me 'RoundHCEdition.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Yonder Come Day - Tucker - Jan 13 2023 - 12-01 PM (1).pdf">Yonder Come Day - Tucker - Jan 13 2023 - 12-01 PM (1)</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Yonder Come Day - Tucker - Jan 13 2023 - 12-01 PM (1).pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Daniel, Daniel, Servant of the Lord.pdf">Daniel, Daniel, Servant of the Lord</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Daniel, Daniel, Servant of the Lord.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="DEEP RIVER.pdf">DEEP RIVER</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="DEEP RIVER.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Go down, Moses.pdf">Go down, Moses</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Go down, Moses.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Gonna study war no more.pdf">Gonna study war no more</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Gonna study war no more.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="He's got the whole world in his hands.pdf">He's got the whole world in his hands</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="He's got the whole world in his hands.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="I want to be ready (EE.UU).pdf">I want to be ready (EE.UU)</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="I want to be ready (EE.UU).pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="I wan't to be ready.pdf">I wan't to be ready</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="I wan't to be ready.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="I'm Goin' to Sing.pdf">I'm Goin' to Sing</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="I'm Goin' to Sing.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="John saw duh numbuh.pdf">John saw duh numbuh</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="John saw duh numbuh.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Lord in troublin.pdf">Lord in troublin</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Lord in troublin.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Rockin Yerusalen.pdf">Rockin Yerusalen</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Rockin Yerusalen.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Seekin' for a City.pdf">Seekin' for a City</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Seekin' for a City.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Swing low, Sweet Chariot.pdf">Swing low, Sweet Chariot</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Swing low, Sweet Chariot.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Were you there.pdf">Were you there</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Were you there.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Amen.pdf">Amen.pdf</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Amen.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Deep river For Full Chorus of Mixed Voices a capella.pdf">Deep river For Full Chorus of Mixed Voices a capella.pdf</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Deep river For Full Chorus of Mixed Voices a capella.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Go Tell It on the Mountain.pdf">Go Tell It on the Mountain</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Go Tell It on the Mountain.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="He Never Said a Mumbalin' Word.pdf">He Never Said a Mumbalin' Word</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="He Never Said a Mumbalin' Word.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Heav'n, Heav'n.pdf">Heav'n, Heav'n</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Heav'n, Heav'n.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Let my people go SATB y piano.pdf">Let my people go SATB y piano</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Let my people go SATB y piano.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Let Us Break Bread Together 'A Communion Hymn'.pdf">Let Us Break Bread Together 'A Communion Hymn'</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Let Us Break Bread Together 'A Communion Hymn'.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Little David.pdf">Little David</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Little David.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Lonesome Valley.pdf">Lonesome Valley</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Lonesome Valley.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Lonesome Valley-NegroSpirituals.pdf">Lonesome Valley-NegroSpirituals</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Lonesome Valley-NegroSpirituals.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="O Mary, Don't You Weep.pdf">O Mary, Don't You Weep</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="O Mary, Don't You Weep.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Oh happy day!.pdf">Oh happy day!</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Oh happy day!.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Poor Mourner For full Chorus of Mixed Voices, with Tenor Solo a capella.pdf">Poor Mourner For full Chorus of Mixed Voices, with Tenor Solo a capella</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Poor Mourner For full Chorus of Mixed Voices, with Tenor Solo a capella.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Soon ah will be done.pdf">Soon ah will be done</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Soon ah will be done.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Swing Low, Sweet Charlot Negro Spiritual.pdf">Swing Low, Sweet Charlot Negro Spiritual</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Swing Low, Sweet Charlot Negro Spiritual.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="What Kind of Shoes.pdf">What Kind of Shoes</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="What Kind of Shoes.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="Negro-Folk-Songs.pdf">Negro-Folk-Songs</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="Negro-Folk-Songs.pdf">Acceder</button></td>
+                </tr>
+                <tr>
+                    <td data-titulo-real="There is a Balm.pdf">There is a Balm</td>
+                    <td>agosto 21, 2023</td>
+                    <td>Negro Spirituals</td>
+                    <td><button class="btn btn-danger seleccionar-partitura-unica" data-bs-toggle="modal" data-bs-target="#modalFormularioUnico" data-titulo="There is a Balm.pdf">Acceder</button></td>
+                </tr>
                 
-                    <!-- Correo Electrónico -->
-                    <label for="email" class="etiqueta-formulario">Correo Electrónico:</label>
-                    <input type="text" id="email" name="email" class="campo-formulario" required pattern="[a-zA-Z0-9._%+-]+@(inacapmail\.com|gmail\.com|hotmail\.com|otrodominio\.com)">
-                    <div id="mensaje-error">
-                        <?php
-                        if (isset($_SESSION['mensaje']) && !empty($_SESSION['mensaje'])) {
-                            echo $_SESSION['mensaje'];
-                            unset($_SESSION['mensaje']); // Limpia el mensaje después de mostrarlo
-                        }
-                        ?>
-                    </div>
-                   
                 
-                    <!-- Número de Celular -->
-                    <label for="celular" class="etiqueta-formulario">Número de Celular:</label>
-                    <input type="tel" id="celular" name="celular" class="campo-formulario" required>
-    
-                    <!-- Ocupación -->
-                    <label for="ocupacion" class="etiqueta-formulario">Ocupación:</label>
-                    <select id="ocupacion" name="ocupacion" class="campo-formulario" required>
-                        <option value="director_coro">Director de Coro</option>
-                        <option value="profesor_musica">Profesor de Música</option>
-                        <option value="integrante_coro">Integrante de Coro</option>
-                        <!-- Agrega más opciones sea necesario -->
-                    </select>
-    
-                    <!-- Selección de Partitura -->
-                    <label for="partitura" class="etiqueta-formulario">Seleccionar Partitura:</label>
-                    <select id="partitura" name="partitura" class="campo-formulario" required>
-                        <option value="I'm Building Me A Home_Walton.pdf">I'm Building Me A Home_Walton.pdf</option>
-                        <option value="I want to go home V2 - Score 2.pdf">I want to go home V2 - Score 2.pdf</option>
-                        <option value="Mary had a baby.pdf">Mary had a baby.pdf</option>
-                        <option value="My Lord What a Morning.pdf">My Lord What a Morning.pdf</option>
-                        <option value="Wade In The Water Short (1).pdf">Wade In The Water Short (1).pdf</option> 
-                        <!-- Agrega más opciones según sea necesario -->
-                        <option value="Amazing Grace 3.pdf">Amazing Grace 3.pdf</option>
-                        <option value="Copy of Music Down In My Soul - Hogan - Jan 13 2023 - 11-24 AM.pdf">Copy of Music Down In My Soul.pdf</option> 
-                        <option value="Drinkin' of the Wine.pdf">Drinkin' of the Wine.pdf</option> 
-                        <option value="Im on my way.pdf">Im on my way.pdf</option> 
-                        <option value="IÔÇÖve Got Peace Like a River (2).pdf">IÔÇÖve Got Peace Like a River (2).pdf</option> 
-                        <option value="Peter on the Sea.pdf">Peter on the Sea.pdf</option> 
-                        <option value="Tryin to get home V3.pdf">Tryin to get home V3.pdf</option> 
-                        <option value="Turn Me 'RoundHCEdition.pdf">Turn Me 'RoundHCEdition.pdf</option> 
-                        <option value="Yonder Come Day - Tucker - Jan 13 2023 - 12-01 PM (1).pdf">Yonder Come Day.pdf</option> 
-                    </select>
-                    
-                    <!-- Campo oculto para el estado -->
-                    <input type="hidden" name="estado" value="pendiente">
-
-                    
-                    <input type="submit" value="Descargar Partitura" class="boton-descarga" name="NegroSpirituals" onclick="enviarFormulario()">
-
-
-                </form>
-            </div>
-        </div>
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
     </div>
+  </div>
+
+    
+    
+    
+    <!-- Modal con el formulario de descarga -->
+     <div class="modal fade" id="modalFormularioUnico" tabindex="-1" aria-labelledby="modalFormularioUnicoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalFormularioUnicoLabel">Descargar Partitura</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formularioDescargaUnico" method="post" action="../php/descargar_partitura.php">
+              <!-- Nombre Completo -->
+               <label for="nombre" class="etiqueta-formulario-unica">Nombre Completo:</label>
+               <input type="text" id="nombre" name="nombre" class="campo-formulario-unica form-control" required>
+               
+               <!-- Correo Electrónico -->
+                <label for="email" class="etiqueta-formulario-unica">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="campo-formulario-unica form-control" required pattern="[a-zA-Z0-9._%+-]+@(inacapmail\.com|gmail\.com|hotmail\.com|otrodominio\.com)">
+                <div id="mensaje-error-unico">
+                  <?php
+                  if (isset($_SESSION['mensaje']) && !empty($_SESSION['mensaje'])) {
+                    echo $_SESSION['mensaje'];
+                    unset($_SESSION['mensaje']); // Limpia el mensaje después de mostrarlo
+                    }
+                    ?>
+                    </div>
+                    <!-- Número de Celular -->
+                    <label for="celular" class="etiqueta-formulario-unica">Número de Celular:</label>
+                    <input type="tel" id="celular" name="celular" class="campo-formulario-unica form-control" required>
+                     
+                    <!-- Ocupación -->
+                     <label for="ocupacion" class="etiqueta-formulario-unica">Ocupación:</label>
+                    <select id="ocupacion" name="ocupacion" class="campo-formulario-unica form-control" required>
+                      <option value="director_coro">Director de Coro</option>
+                      <option value="profesor_musica">Profesor de Música</option>
+                      <option value="integrante_coro">Integrante de Coro</option>
+                    </select>
+                    
+                    <!-- Selección de Partitura -->
+                     <label for="partitura" class="etiqueta-formulario-unica">Partitura Seleccionada:</label>
+                     <input type="text" id="partituraUnica" name="partitura" class="campo-formulario-unica form-control" readonly required>
+                     
+                     <!-- Campo oculto para el estado -->
+                      <input type="hidden" name="estado" value="pendiente">
+                      <input type="submit" value="Descargar Partitura" class="boton-descarga" name="NegroSpirituals" onclick="enviarFormulario()">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -478,6 +767,7 @@ session_start(); // Inicia la sesión
 
   <body>
     <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
